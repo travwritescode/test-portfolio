@@ -22,4 +22,3 @@ def test_can_get_auth_token():
 
     assert_that(response.status_code).is_equal_to(200)
     assert_that(token).is_not_none()
-
