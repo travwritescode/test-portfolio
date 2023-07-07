@@ -35,6 +35,7 @@ def test_can_get_booking_id_by_name():
     assert_that(response.status_code).is_equal_to(200)
     assert_that(id_list).contains(booking_id)
 
+
 def test_can_get_booking_id_by_checkin_date():
     """
     According to documentation, passing query param of checkin date retrieves
