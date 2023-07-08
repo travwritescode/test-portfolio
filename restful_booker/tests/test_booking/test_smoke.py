@@ -8,7 +8,6 @@ import requests
 
 from restful_booker.config import BASE_URI
 
-
 def test_can_get_booking_id_by_name(create_new_booking):
     """
     Test that requesting a booking id filtering by first and last name
