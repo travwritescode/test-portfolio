@@ -9,16 +9,11 @@ from assertpy import assert_that
 from restful_booker.config import BASE_URI
 
 
-def test_can_get_auth_token():
+def test_can_get_auth_token(get_token):
     """
     Test that an auth token can be retrieved for required functionality
     (PUT and DELETE enpoints)
     """
-    payload = dumps({"username": "admin", "password": "password123"})
-    headers = {"Content-Type": "application/json"}
-
-    response = requests.post(f"{BASE_URI}/auth", data=payload, headers=headers, timeout=10000)
-    token = response.json()["token"]
-
+    response, token = get_token
     assert_that(response.status_code).is_equal_to(200)
     assert_that(token).is_not_none()

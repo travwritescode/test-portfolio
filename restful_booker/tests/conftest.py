@@ -6,7 +6,7 @@ import requests
 from restful_booker.config import BASE_URI
 
 
-pytest.fixture
+@pytest.fixture
 def create_new_booking():
     """
     Creates a new booking and returns the response object
@@ -32,3 +32,14 @@ def create_new_booking():
     response = requests.post(f'{BASE_URI}/booking', headers=headers, data=payload, timeout=10000)
 
     return response
+
+
+@pytest.fixture
+def get_token():
+    payload = json.dumps({"username": "admin", "password": "password123"})
+    headers = {"Content-Type": "application/json"}
+
+    response = requests.post(f"{BASE_URI}/auth", data=payload, headers=headers, timeout=10000)
+    token = response.json()["token"]
+
+    return response, token
