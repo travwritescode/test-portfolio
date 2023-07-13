@@ -73,6 +73,7 @@ def test_can_update_booking_with_partial_payload(get_token, create_new_booking):
     assert_that(response.json()['firstname']).is_equal_to('Ethan')
     assert_that(response.json()['lastname']).is_equal_to('Stanfield')
 
+
 def test_can_delete_booking(get_token, create_new_booking):
     """
     Can delete a booking by providing the booking ID
