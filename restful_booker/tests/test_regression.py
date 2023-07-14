@@ -11,7 +11,7 @@ def test_can_get_all_booking_ids():
     """
     response = requests.get(f"{BASE_URI}/booking", timeout=10000)
 
-    assert_that(response.status_code).is_equal_to(200)
+    assert_that(response.status_code).is_equal_to(400)
 
 
 def test_can_create_new_booking(create_new_booking):
