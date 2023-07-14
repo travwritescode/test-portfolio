@@ -6,7 +6,7 @@ Endpoints include:
 from assertpy import assert_that
 import requests
 
-from restful_booker.config import BASE_URI
+from conftest import BASE_URI
 
 def test_can_get_booking_id_by_full_name(create_new_booking):
     """

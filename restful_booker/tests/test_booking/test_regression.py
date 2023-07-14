@@ -2,7 +2,7 @@ import json
 from assertpy import assert_that
 import requests
 
-from restful_booker.config import BASE_URI
+from conftest import BASE_URI
 
 
 def test_can_get_all_booking_ids():

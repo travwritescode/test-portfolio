@@ -3,10 +3,9 @@ Test the functionality of retrieving authentication tokens.
 """
 
 from json import dumps
-import requests
 from assertpy import assert_that
 
-from restful_booker.config import BASE_URI
+from conftest import BASE_URI
 
 
 def test_can_get_auth_token(get_token):

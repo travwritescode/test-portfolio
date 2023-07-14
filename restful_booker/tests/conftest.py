@@ -3,7 +3,7 @@ from uuid import uuid4
 import pytest
 import requests
 
-from restful_booker.config import BASE_URI
+BASE_URI = 'https://restful-booker.herokuapp.com'
 
 
 @pytest.fixture
