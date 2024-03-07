@@ -1,3 +1,5 @@
+const itemData = ["Sauce Labs Backpack", "Sauce Labs Bike Light", "Sauce Labs Bolt T-Shirt", "Sauce Labs Fleece Jacket", "Sauce Labs Onesie", "Test.allTheThings() T-Shirt (Red)"]
+
 describe('Saucedemo Happy Path', () => {
   beforeEach(() => {
     cy.visit('https://www.saucedemo.com/')
@@ -47,3 +49,10 @@ describe('Saucedemo Happy Path', () => {
     cy.url().should('equal', 'https://www.saucedemo.com/')
   })
 })
+
+function arrayEquals(a, b) {
+  return Array.isArray(a) &&
+      Array.isArray(b) &&
+      a.length === b.length &&
+      a.every((val, index) => val === b[index]);
+}
