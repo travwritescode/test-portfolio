@@ -12,6 +12,7 @@ describe('Saucedemo Happy Path', () => {
   })
 
   it('Buys all items from the Saucedemo store', () => {
+    let cartItems = []
     // User is on inventory page and can add all items to cart
     cy.get('button:contains("Add to cart")').each(($el) => {
       cy.wrap($el).click()
@@ -32,7 +33,11 @@ describe('Saucedemo Happy Path', () => {
 
     // User can complete checkout step 2
     cy.url().should('include', '/checkout-step-two')
-    cy.get('.cart_item_label').should('have.length', 6)
+    cy.get('.inventory_item_name').should(($els) => {
+      // map jquery elements to array of their innerText
+      const elsText = $els.toArray().map(el => el.innerText)
+      expect(elsText).to.deep.eq(itemData)
+    })
     cy.get('[data-test="finish"]').click()
 
     // Checkout successfully completed and user can return to main inventory page
@@ -49,10 +54,3 @@ describe('Saucedemo Happy Path', () => {
     cy.url().should('equal', 'https://www.saucedemo.com/')
   })
 })
-
-function arrayEquals(a, b) {
-  return Array.isArray(a) &&
-      Array.isArray(b) &&
-      a.length === b.length &&
-      a.every((val, index) => val === b[index]);
-}
