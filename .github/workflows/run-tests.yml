@@ -36,8 +36,8 @@ jobs:
       working-directory: ./restful_booker
       run: |
         pytest
-    - name: Test restful booker with pytest
-      working-directory: ../saucedemo
+    - name: Test saucedemo with pytest
+      working-directory: ./../saucedemo
       run: |
         pytest
 
