@@ -10,3 +10,4 @@ pluggy==1.2.0
 pytest==7.4.0
 requests==2.31.0
 urllib3==2.0.3
+selenium==4.20.0
