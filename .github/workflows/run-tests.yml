@@ -37,7 +37,7 @@ jobs:
       run: |
         pytest
     - name: Test saucedemo with pytest
-      working-directory: ./../saucedemo
+      working-directory: ./saucedemo
       run: |
         pytest
 
