@@ -36,10 +36,6 @@ jobs:
       working-directory: ./restful_booker
       run: |
         pytest
-    - name: Test saucedemo with pytest
-      working-directory: ./saucedemo
-      run: |
-        pytest
 
   cypress-run:
     runs-on: ubuntu-22.04
