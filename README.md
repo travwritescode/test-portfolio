@@ -1,3 +1,5 @@
+![Test Status](https://github.com/github/docs/actions/workflows/run-tests.yml/badge.svg?event=push)
+
 # test-portfolio
 A portfolio of all of my practice testing solutions
 
