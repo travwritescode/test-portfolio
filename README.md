@@ -1,4 +1,4 @@
-![Test Status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
+![Test Status](https://github.com/travwritescode/test-portfolio/actions/workflows/run-tests.yml/badge.svg?event=push)
 
 # test-portfolio
 A portfolio of all of my practice testing solutions
