@@ -13,17 +13,13 @@ These websites are in completed or mostly completed states so these automated te
 
 This repository is also a work in progress. As I continue my job search, this is where I will be practicing to keep my skills up to date. To stay as up-to-date as possible with what I am practicing, I encourage you to check out my code log on my hosted [GitHub page](https://travwritescode.github.io/).
 
-## Restful Booker API Tests
-
-[![Restful Booker Tech](https://skillicons.dev/icons?i=py&theme=light)](https://skillicons.dev)
+## Restful Booker API Tests [![Restful Booker Tech](https://skillicons.dev/icons?i=py&theme=light)](https://skillicons.dev)
 
 Test suite of all available API requests in the [Restful Booker API](https://restful-booker.herokuapp.com/apidoc/index.html) document.
 
 Written in Python using `pytest` and the `requests` library for making API calls.
 
-## Saucedemo UI Tests
-
-[![SauceDemo Tech](https://skillicons.dev/icons?i=js,cypress&theme=light)](https://skillicons.dev)
+## Saucedemo UI Tests [![SauceDemo Tech](https://skillicons.dev/icons?i=js,cypress&theme=light)](https://skillicons.dev)
 
 Test suite of happy path validation on the [Saucedemo](https://www.saucedemo.com/) online shopping website.
 
