@@ -1,51 +1,32 @@
 ![Test Status](https://github.com/travwritescode/test-portfolio/actions/workflows/run-tests.yml/badge.svg?event=push)
 
-# test-portfolio
-A portfolio of all of my practice testing solutions
+# Trav’s Test Portfolio
 
-# API Tests
-## Restful Booker API
-### Regression Tests
-1. Get Auth Token
-    - Test that the user can log in to the app and retrieve a valid auth token
-2. Get Booking IDs
-    - Test that all booking IDs in the database can be retrieved
-3. Get Booking ID
-    - Test that user can get details of a single booking ID
-4. Create Booking
-    - Test that the user can create a booking by passing valid request body
-5. Update Booking
-    - Test that the user can update an existing booking by passing a valid request body
-    - Requires valid token
-6. Partial Update Booking
-    - Test that the user can update a booking by passing a partial JSON payload
-    - Requires valid token
-7. Delete Booking
-    - Test that the user can delete a booking
-    - Requires valid token
-8. Health check
-    - Validates that the API is up and running
-    - Fixture for performing the test suite. If not up and running, do not run all tests
+This is a place for me to showcase my skills in test automation. I have created this repository to show my abilities in automating tests with the two technologies I have the most recent experience:
 
-### Smoke Tests
-1. Get Booking ID by Full Name
-    - Teststhat user can pass full name as query params to retrieve booking ID that matches the name
-2. Get Booking ID by First Name
-    - Test that user can pass first name as query param to retrieve booking ID that matches the name
-3. Get Booking ID by Last Name
-    - Test that user can pass last name as query param to retrieve booking ID that matches the name
-4. Get Booking ID by Checkin and Checkout Date
-    - Test that the user can pass the checkin and checkout date as query params to retrieve booking IDs that match both
-5. Get Booking ID by Checkin Date
-    - Test that the user can pass the checkin date as a query param to retrieve booking IDs with checkin date equal to or later than
-6. Get Booking ID by Checkout Date
-    - Test that the user can pass the checkin date as a query param to retrieve booking IDs with checkin date equal to or earlier than
+- JavaScript and Cypress.io
+- Python and Selenium WebDriver/Requests
 
+I am automating against publicly available test websites including the [Restful Booker API](https://restful-booker.herokuapp.com/apidoc/index.html) with Python and requests, and the [Saucedemo](https://www.saucedemo.com/) online shopping website.
 
-Known issues:
-- Retrieving booking id with checkin date query param equal to expected checkin
-    date returns no results
-    This does not meet acceptance criteria defined in documentation
-- Retrieving booking id with checkout date query param less than expected checkout
-    date returns no results (returns ids of checkout date less than or equal to)
-    This does not meet acceptance criteria defined in documentation
+These websites are in completed or mostly completed states so these automated test solutions represent an unchanging app state and will undergo very few updates and changes. Regardless, I have built them in a way to be extensible and maintainable.
+
+This repository is also a work in progress. As I continue my job search, this is where I will be practicing to keep my skills up to date. To stay as up-to-date as possible with what I am practicing, I encourage you to check out my code log on my hosted [GitHub page](https://travwritescode.github.io/).
+
+## Restful Booker API Tests
+
+Built with:
+
+[![Restful Booker Tech](https://skillicons.dev/icons?i=py&theme=light)](https://skillicons.dev)
+
+Test suite of all available API requests in the [Restful Booker API](https://restful-booker.herokuapp.com/apidoc/index.html) document.
+
+Written in Python using `pytest` and the `requests` library for making API calls.
+
+## Saucedemo UI Tests
+
+[![SauceDemo Tech](https://skillicons.dev/icons?i=js,cypress&theme=light)](https://skillicons.dev)
+
+Test suite of happy path validation on the [Saucedemo](https://www.saucedemo.com/) online shopping website.
+
+Tests written in JavaScript using the Cypress test framework for UI automation.
