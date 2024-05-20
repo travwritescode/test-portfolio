@@ -13,7 +13,7 @@ These websites are in completed or mostly completed states so these automated te
 
 This repository is also a work in progress. As I continue my job search, this is where I will be practicing to keep my skills up to date. To stay as up-to-date as possible with what I am practicing, I encourage you to check out my code log on my hosted [GitHub page](https://travwritescode.github.io/).
 
-## Restful Booker API Tests
+## [Restful Booker API Tests](./README-restful-booker.md)
 
 [![Restful Booker Tech](https://skillicons.dev/icons?i=py&theme=light)](https://skillicons.dev)
 
