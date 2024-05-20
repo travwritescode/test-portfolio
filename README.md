@@ -15,8 +15,6 @@ This repository is also a work in progress. As I continue my job search, this is
 
 ## Restful Booker API Tests
 
-Built with:
-
 [![Restful Booker Tech](https://skillicons.dev/icons?i=py&theme=light)](https://skillicons.dev)
 
 Test suite of all available API requests in the [Restful Booker API](https://restful-booker.herokuapp.com/apidoc/index.html) document.
