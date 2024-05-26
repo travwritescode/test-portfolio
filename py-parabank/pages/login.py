@@ -1,10 +1,5 @@
-from locators import LoginPageLocators, LoginResultPageLocators
-
-class BasePage(object):
-    """Base class to initialize the base page that will be called from all pages"""
-
-    def __init__(self, driver):
-        self.driver = driver
+from locators.login_locators import LoginPageLocators, LoginResultPageLocators
+from pages.base import BasePage
 
 class LoginPage(BasePage):
     """Home page action methods come here."""
@@ -25,7 +20,12 @@ class LoginPage(BasePage):
         login = self.driver.find_element(*LoginPageLocators.LOGIN_BUTTON)
         login.click()
 
+
 class LoginResultPage(BasePage):
     def is_error_encountered(self):
         error = self.driver.find_element(*LoginResultPageLocators.ERROR_MESSAGE)
         return "An internal error has occurred and has been logged" in error.text
+    
+    def is_user_logged_in(self):
+        greeting = self.driver.find_element(*LoginResultPageLocators.GREETING)
+        return "Welcome John Smith" in greeting.text
