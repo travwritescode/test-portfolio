@@ -1,5 +1,7 @@
+import pytest
 import pages.login as login
 
+@pytest.mark.usefixtures('clean_database')
 def test_login_as_existing_user(driver):
     login_page = login.LoginPage(driver)
     assert login_page.is_title_matches()
