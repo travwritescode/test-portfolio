@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 import requests
-import pages.login as login
+from pages.login_page import LoginPage
 
 @pytest.fixture(scope='function')
 def driver():
@@ -27,5 +27,5 @@ def clean_database():
 
 @pytest.fixture(scope='function')
 def login_user(driver):
-    login_page = login.LoginPage(driver)
+    login_page = LoginPage(driver)
     login_page.login("john", "demo")

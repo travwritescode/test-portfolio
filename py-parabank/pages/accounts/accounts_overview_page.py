@@ -1,4 +1,4 @@
-from pages.base import BasePage
+from pages.base_page import BasePage
 from locators.accounts_overview_locators import AccountsOverviewPageLocators
 from utils import get_account_row_contents
 

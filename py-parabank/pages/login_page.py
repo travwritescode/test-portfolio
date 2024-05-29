@@ -1,5 +1,5 @@
 from locators.login_locators import LoginPageLocators, LoginResultPageLocators
-from pages.base import BasePage
+from pages.base_page import BasePage
 
 class LoginPage(BasePage):
     """Home page action methods come here."""
