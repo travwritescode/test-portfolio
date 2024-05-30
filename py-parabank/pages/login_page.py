@@ -4,7 +4,7 @@ from pages.base_page import BasePage
 class LoginPage(BasePage):
     """Home page action methods come here."""
 
-    def is_title_matches(self):
+    def title_is_parabank(self):
         """Verifies that the hardcoded text "ParaBank" appears in page title"""
 
         return "ParaBank" in self.driver.title
